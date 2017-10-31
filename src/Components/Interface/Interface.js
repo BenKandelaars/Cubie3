@@ -1,4 +1,5 @@
 import React from 'react';
+import controller from '../../controllers/workspace';
 import {
   Container,
   CubeControls,
@@ -12,10 +13,14 @@ class Interface extends React.Component {
 
     this.state = {
       active: 1,
-      cubes: 1
+      cubes: 1,
     }
   }
   
+  speed(increment) {
+    controller.changeSpeed(increment);   
+  }
+
   render() {
     return (
       <Container>
@@ -25,6 +30,11 @@ class Interface extends React.Component {
           <h4>Cube Controls</h4>
 
           <p>Selected: &nbsp; {this.state.active}</p>
+          <Size>
+            <p>Spin</p>
+            <button onClick={() => this.speed(1)}>Faster</button>
+            <button onClick={() => this.speed(-1)}>Slower</button>          
+          </Size>
           <Size>
             <p>Size</p>
             <button>Bigger</button>
@@ -44,5 +54,7 @@ class Interface extends React.Component {
     );
   }
 };
+
+
 
 export default Interface;
