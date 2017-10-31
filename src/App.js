@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Interface from './Components/Interface/Interface';
-import CubieSpace from './Components/Canvas/CubieSpace';
+import Dashboard from './layouts/Dashboard';
+import './App.css';
 
 class App extends Component {
   componentDidMount() {
@@ -10,12 +10,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Cubie Header</h1>
-        <Interface />
-        <CubieSpace
-          height={500}
-          width={500}
-        />
+        <Dashboard />
       </div>
     );
   }
