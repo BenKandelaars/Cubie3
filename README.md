@@ -15,9 +15,9 @@ In process of setting up the controller layer, I implemented a rudimentry publis
 The project uses create-react-app and can be run on a standalone development machine.
 
 1st clone the repository:
-> git clone https://github.com/BenKandelaars/automata.git
+> git clone https://github.com/BenKandelaars/Cubie3.git
 
-> cd automata
+> cd Cubie3
 
 > npm install
 
