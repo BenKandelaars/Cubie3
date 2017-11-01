@@ -15,12 +15,14 @@ In process of setting up the controller layer, I implemented a rudimentry publis
 The project uses create-react-app and can be run on a standalone development machine.
 
 1st clone the repository:
-git clone https://github.com/BenKandelaars/automata.git
-cd automata
-npm install
+> git clone https://github.com/BenKandelaars/automata.git
+
+> cd automata
+
+> npm install
 
 2nd build and run the repo
-npm run start
+> npm run start
 
 ## Notes ##
 Whilst I'm familiar with tests, none were written in this case due to time constraints. 
