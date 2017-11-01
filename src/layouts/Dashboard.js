@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import controller from "../controllers/workspace";
 import Interface from '../components/Interface/Interface';
 import CubieSpace from '../components/Canvas/CubieSpace';
 import {
@@ -14,7 +15,9 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <View>
+      <View 
+        onWheel={e => controller.onWheel(Math.sign(e.deltaY))}    
+      >
         <Header>
          <h1>Cubie</h1>
         </Header>
