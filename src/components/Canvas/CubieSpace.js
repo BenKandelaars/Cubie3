@@ -35,6 +35,8 @@ class Workspace3D extends React.Component {
       case 'up':
         this.mouseDown && (this.mouseDown = false);
         break;
+      
+      default:
     }
   }
 

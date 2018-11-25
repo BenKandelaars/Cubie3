@@ -11,8 +11,7 @@ function createNewCube({ cubeMeta }) {
   }
 };
 
-function controller () {
-
+function controller() {
   let cubeStore = [];
   let selectedCube = 0;
   let width;
@@ -21,11 +20,10 @@ function controller () {
   let client = {};
   let callbacks = {};
   
-  let colorWhenSelected = new THREE.MeshLambertMaterial( { color: '#9d99c9' } );
-
+  // let colorWhenSelected = new THREE.MeshLambertMaterial( { color: '#9d99c9' } );
 
   const spawn = () => {
-    const newCube = createNewCube({ cubeMeta: new cubeMeta})
+    const newCube = createNewCube({ cubeMeta: new cubeMeta()})
     
     let min = -width * 0.01;
     let max = width * 0.01;
@@ -47,7 +45,6 @@ function controller () {
 
   const animate = () => {
     const loop = () => {
-      
       requestAnimationFrame( animate );
       
       if (!isStoreEmpty()) {
@@ -65,7 +62,6 @@ function controller () {
   }   
 
   const initWorkspace = (container) => {    
-  
     const boundingRect = container.getBoundingClientRect()
     width = boundingRect.width;
     height = boundingRect.height;
@@ -85,7 +81,6 @@ function controller () {
   };    
  
   function updateCube({ meta, webGL }) {
-    
     webGL.rotation.x += 0;
     webGL.rotation.y += meta.rotationSpeed;
   
@@ -124,7 +119,6 @@ function controller () {
 
   function deleteCube() {   
     if (isStoreEmpty()) { return };
-
     scene.remove(cubeStore[selectedCube].webGL);
     cubeStore.splice(selectedCube, 1)            
   }
@@ -147,6 +141,8 @@ function controller () {
         }
         client[axis] = currentPosition;
         break;
+      
+      default:
       }
   }
   
